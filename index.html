@@ -99,24 +99,7 @@ footer {
   color: #666;
 }
 
-  <script>
-const cards = document.querySelectorAll('.card');
-
-function revealOnScroll() {
-  const triggerBottom = window.innerHeight * 0.85;
-
-  cards.forEach(card => {
-    const cardTop = card.getBoundingClientRect().top;
-
-    if(cardTop < triggerBottom) {
-      card.classList.add('show');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-</script>
+  
 </style>
 </head>
 
@@ -237,6 +220,23 @@ function mood(type) {
   document.getElementById("response").innerText = msg;
 }
 </script>
+<script>
+const cards = document.querySelectorAll('.card');
 
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+
+    if(cardTop < triggerBottom) {
+      card.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
 </body>
 </html>
